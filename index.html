@@ -1,0 +1,798 @@
+<html>
+<head>
+    <!-- Style and format -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <style> 
+
+ /* wallpaper background */
+
+        body {
+            background-image: url('https://i.pinimg.com/736x/e4/c5/67/e4c567ae8a06fd7a8e6762ddded78a20.jpg'); 
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-attachment: fixed; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+/* Layout */
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+/* Section background color */	
+	
+	.main {
+	background-color: #d8bfd8;
+	border: 5px solid #800080;
+	margin: 20px 0;
+	padding: 20px;
+	box-shadow: 0 2px 5px rgb(173,216,230);
+	border-radius: 8px;
+        }
+	
+	.about {
+	background-color: #b0c4de ;
+	border: 5px solid #002147;
+	margin: 20px 0;
+	padding: 20px;
+	box-shadow: 0 2px 5px rgb(176,196,222);
+	border-radius: 8px;
+
+        }
+
+	.journey {
+	background-color: #99e6b3;
+	border: 5px solid #008080;
+	margin: 20px 0;
+	padding: 20px;
+	box-shadow: 0 2px 5px rgb(135,206,250);
+	border-radius: 8px;
+
+        }
+
+	.experience {
+	background-color: #d0f0c0;
+	border: 5px solid #0bda51;
+	margin: 20px 0;
+	padding: 20px;
+	box-shadow: 0 2px 5px rgb(100,149,237);
+	border-radius: 8px;
+
+        }
+
+	.gallery {
+	background-color: #f49ac2 ;
+	border: 5px solid #ca1f7b;
+	margin: 20px 0;
+	padding: 20px;
+	box-shadow: 0 2px 5px rgb(10,186,181);
+	border-radius: 8px;
+	
+	}
+
+/* Section table */
+
+	table {
+	width: 75%;
+	border-collapse: collapse;
+	margin: 20px 0;
+        }
+
+        table, th, td {
+	border: 3px solid black;
+        }
+
+        th, td {
+	padding: 10px;
+	text-align: left;
+        }
+
+/* Section bar for skills */	
+
+        body {
+	font-family: Arial, sans-serif;
+	margin: 15px;
+        }
+
+        .chart-container {
+	max-width: 900px;
+	margin: auto;
+	text-align: center;
+        }
+
+        .chart {
+ 	margin-bottom: 10px;
+        }
+
+        .chart-title {
+	margin-bottom: 10px;
+	font-weight: bold;
+	font-size: 1.0em;
+        }
+
+        .skill {
+	display: inline-block;
+	margin: 40px;/* gap for each bar */
+	width: 50px;
+	text-align: center;
+        }
+
+        .bar {
+	width: 100%;
+	background-color: #ddd;
+	border-radius: 10px;
+	position: relative;
+	overflow: hidden;
+	height: 200px;
+	display: flex;
+	flex-direction: column-reverse;
+        }
+
+        .bar-fill {
+	width: 100%;
+	border-radius: 5px;
+	position: absolute;
+	bottom: 0;
+	background: linear-gradient(180deg, #ff7f50, #ff8c69);
+	color: white;
+	font-size: 12px;
+	line-height: 20px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	padding-bottom: 5px;
+        }
+
+        .skill-name {
+	margin-top: 10px;
+	font-size: 0.9em;
+	font-weight: bold;
+        }
+
+
+	{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	font-family: Arial, sans-serif;
+        }
+
+/* Sidebar */
+
+        .sidebar {
+	position: fixed; 
+	top: 0; 
+	left: 0; 
+	width: 200px; 
+	height: 100%; 
+	background: #f4bbff; 
+	padding: 10px;
+	box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+        }
+
+/* navigation font */
+
+        .sidebar nav a {
+	display: block;
+	text-decoration: none;
+	color: #1d2951;
+	padding: 10px 15px;
+	margin: 5px 0;
+	border-radius: 5px;
+        }
+
+        .sidebar nav a:hover {
+	background: #333;
+	color: #c71585;
+        }
+
+        .container {
+	margin-left: 220px; 
+	padding: 20px; 
+        }
+
+/* close Sidebar */
+
+        .main-content {
+	flex: 1;
+	padding: 20px;
+        }
+
+
+        header {
+	text-align: center;
+	background: #f3e5ab;
+	border: 5px solid #ffd700;
+  	padding: 10px 0;
+	margin-bottom: 20px;
+        }
+
+        footer {
+	background-color: #f3e5ab;
+	border: 5px solid #ffd700 ;
+	padding: 10px;
+	text-align: center;
+	color: solid black;
+        }
+
+/* open album */
+
+	.image-container {
+	position: relative;
+        }
+
+/* Style image */
+	.image-container img {
+        }
+
+        .image-caption {
+	position: absolute;
+	bottom: 10px; 
+	left: 10px;
+	color: white;
+	background-color: rgba(0, 0, 0, 0.5); 
+ 	padding: 5px;
+	display: none; 
+        }
+
+        
+        .image-container:hover .image-caption {
+	display: block; 
+        }
+
+
+/* gallery button */
+
+	.gallery-button {
+	display: inline-block;
+	background-color: #deb887;
+	color: black;
+	text-decoration: none;
+	padding: 10px 20px;
+	font-size: 20px;
+	border-radius: 5px;
+        }
+
+	.gallery-button:hover {
+	background-color: #deb887;
+        }
+
+
+    </style>
+
+</head>
+
+<!-- Konten dlm website -->
+<body>
+
+<!-- navigation sidebar -->
+
+<div class="container">
+<aside class="sidebar">
+<nav>
+	<p><a href="#all">ALL</a></p>
+	<p><a href="#appreciation">APPRECIATION</a></p>
+	<p><a href="#about">ABOUT ME</a></p>
+	<p><a href="#journey">EDUCATION</a></p>
+	<p><a href="#experience">EXPERIENCE</a></p>
+	<p><a href="#gallery">GALLERY</a></p>
+	<p><a href="#contact">CONTACT</a></p>
+</nav>
+</aside>
+
+<!-- Main Title -->
+
+	<div class="main-content">
+
+        <header>
+            <h1>🍄Eiyna's Website!🍄</h1>
+        </header>
+
+<!-- first section -->
+
+<center>
+	<img src="ina.jpg" alt="ina" style="width:450px;height:550px;border: 5px solid #002147;"> 
+		<h1 id="all" style="scroll-margin-top: 650px;">🍄Welcome to Eiyna's Website!🍄</h1>
+</center>
+
+<!-- moving title -->
+        <p><marquee>Welcome to Eiyna's Website!🍄 Keep smiling and enjoy exploring!🤗❤️</marquee></p>
+
+<section class="main">
+
+<center>
+	<!-- picture of my website -->
+		<img src="eiyna.png" alt="eiyna" style="width:600px;height:350px;border: 5px solid #002147;"> 
+
+
+	<!-- date of creation -->
+		<p>November, 2024.</p>
+</center>
+
+	<!-- Audio -->
+<center>
+	<audio controls>
+        	<source src="sempurna_instrumental.mp3" type="audio/mpeg">
+        	Unavailable
+	</audio>
+</center>
+
+<!-- APPRECIATION post -->
+
+<center>
+	<h1 id="appreciation" style="scroll-margin-top: 450px;">💐 APPRECIATION 💐 !!!</h1>
+
+		<p>Firstly, I would like to express my deepest gratitude to Allah SWT for his blessings and guidance throughout the completion of this assignment. Without his grace and 		guidance, I would not have been able to accomplish this work.</p>
+
+		<p>I would also like to extend my sincere appreciation and thanks to my lecturer, Madam Ummu Asyikin Binti Othman for her help, guidance, suggestions, and advice throughout 		the entire process of completing this assignment.</p>
+
+		<p>Lastly, I would like to express my thanks to my beloved family and friends, who have provided continuous support and encouragement to me during this assignment. Your 		understanding, patience, and willingness to assist, whether directly or indirectly, have been truly appreciated.</p>
+
+		<p>Thank you to everyone who played a part in the accomplishment of this assignment. Your kindness and contributions will always be remembered.</p>
+
+</center>
+
+</section>
+
+
+<section class="about">
+
+	<!-- Subtopik 1 -->
+		<h1 id="about" style="scroll-margin-top: 65px;">⋆.˚ABOUT ME⁺˚⋆｡°🍄₊</h1>
+
+<center>
+
+	<!-- my picture -->
+		<img src="me.jpg" alt="Me" style="width:250px;height:350px;border: 5px solid #002147;">
+
+		<p>Hi, I'm Ina!🍄 I love playing mobile games and enjoy outdoor activities like jogging in my free time. I'm from Batu Pahat, Johor, and I'm always up for trying new things 		and having fun!</p>
+
+</center>
+
+
+<section class="personal information">
+	<!-- Table resume -->
+
+<center>
+	
+	<h2>📌Personal Information</h2>
+
+<!-- Merged Table -->
+
+<table>
+
+<tr>
+	<td><b>Name</b></td>
+	<td>Nur Serina Binti Salim</td>
+</tr>
+
+<tr>
+	<td><b>Date of Birth</b></td>
+	<td>10 December 2024</td>
+</tr>
+
+<tr>
+	<td><b>Age</b></td>
+	<td>20 years old</td>
+</tr>
+
+<tr>
+	<td><b>Address</b></td>
+	<td>Batu Pahat, Johor</td>
+</tr>
+
+<tr>
+	<td><b>Hobbies</b></td>
+<td>
+	<ul>
+		<li>Play Mobile Games</li>
+		<li>Read Books</li>
+		<li>Sports and Fitness</li>
+		<li>Watch Movies</li>
+	</ul>
+</td>
+</tr>
+
+<tr>
+	<td><b>Favorite Foods</b></td>
+<td>
+	<ul>
+		<li>Pizza</li>
+		<li>Chicken Fried Rice</li>
+	</ul>
+</td>
+</tr>
+
+<tr>
+	<td><b>Favorite Drinks</b></td>
+<td>
+	<ul>
+		<li>Iced Tea</li>
+		<li>Vanilla Blue</li>
+	</ul>
+</td>
+</tr>
+</table>
+
+</section>
+
+<center>
+	<h2>❤️Favourite quotes❤️</h2>
+		<p>"Be the change you wish to see in the world."</p>		
+</center>
+<br>
+
+<section class="education background">
+	<h2>🎓Education Background🎓</h2>
+
+</center>
+
+<tr>
+<ol>
+	<p><b>2011-2016</b></p>
+	<li>SK Seri Sinaran</li>
+	<p><b>2017-2021</b></p>
+	<li>SMK Permata Jaya</li>
+	<p><b>2022-2024</b></p>
+	<li>Universiti Teknologi Mara Cawangan Johor Kampus Segamat</li>    
+</ol>
+</tr>
+
+</section>
+
+<br>
+
+<section class="skills">
+<center>
+	<h3>💡Skills💡</h3>
+</center>
+
+	<div class="chart-container">
+	<div class="chart">
+	<p class="chart-title">Personal Skills</p>
+
+<!-- teamwork -->
+
+	<div class="skill">
+	<div class="bar">
+	<div class="bar-fill" style="height: 85%;">85%</div>
+	</div>
+	<p class="skill-name">Teamwork</p>
+	</div>
+
+<!-- Adaptability -->
+
+	<div class="skill">
+	<div class="bar">
+	<div class="bar-fill" style="height: 75%;">75%</div>
+	</div>
+	<p class="skill-name">Adaptability</p>
+	</div>
+
+<!-- Time Management -->
+
+	<div class="skill">
+	<div class="bar">
+	<div class="bar-fill" style="height: 73%;">73%</div>
+	</div>
+	<p class="skill-name">Time Management</p>
+	</div>
+
+<!-- Positive Attitude -->
+
+	<div class="skill">
+	<div class="bar">
+	<div class="bar-fill" style="height: 80%;">80%</div>
+	</div>
+	<p class="skill-name">Positive Attitude</p>
+	</div>
+	</div>
+
+
+	<div class="chart">
+	<p class="chart-title">Technical Skills</p>
+	<div class="skill">
+
+<!-- Computer Skills -->
+
+	<div class="bar">
+	<div class="bar-fill" style="height: 80%;">80%</div>
+	</div>
+	<p class="skill-name">Computer Skills</p>
+	</div>
+
+<!-- Internet Browsing -->
+
+ 	<div class="skill">
+	<div class="bar">
+	<div class="bar-fill" style="height: 85%;">85%</div>
+	</div>
+	<p class="skill-name">Internet Browsing</p>
+	</div>
+
+<!-- Designing -->
+
+	<div class="skill">
+	<div class="bar">
+	<div class="bar-fill" style="height: 80%;">80%</div>
+	</div>
+	<p class="skill-name">Designing</p>
+	</div>
+
+<!-- Editing -->
+
+	<div class="skill">
+	<div class="bar">
+	<div class="bar-fill" style="height: 85%;">85%</div>
+	</div>
+	<p class="skill-name">Editing</p>
+	</div>
+	</div>
+	</div>
+</section>
+
+</section>
+
+	
+<!-- Subtopik 2 -->
+
+<section class="journey">
+
+	<h1 id="journey" style="scroll-margin-top: 65px;">🎓EDUCATION JOURNEY✈️</h1>
+
+<section class="primary">
+
+<ul>
+
+	
+
+<div style="display: flex; align-items: center;">
+
+<!-- text -->
+
+        <div style="flex: 1; padding-right: 20px;">
+
+	<li>
+		<h3 style="font-size: 35px;">✏️Primary School</h3>
+	</li>
+
+	<p style="margin-top: 10px; line-height: 1.5; text-align: justify; font-size: 20px;">
+		I started my schooling journey back in 2010 at the preschool of SK Seri Sinaran. 
+		After that, I continued my primary school years there from 2011 to 2016. In 2016, I 
+		sat for the Ujian Penilaian Sekolah Rendah (UPSR) at the same school. Looking back, 
+		my primary school was filled with many sweet and unforgettable memories.
+	</p>
+</div>
+
+<!-- image primary school -->
+
+	<div class="image-container">
+        <div style="flex: 1; text-align: center;">
+            <img src="school_03.jpg" alt="Teacher’s Day Celebration" 
+		style="width: 100%; max-width: 500px; height: auto; border: 5px solid #002147;">
+		<div class="image-caption">This is a cherished photo of me during my elementary school days, a time filled with wonderful memories and experiences!💖</div>
+	</div>
+	</div>
+
+</ul>
+
+</section>
+
+<br>
+<br>
+<br>
+
+
+<section class="high">
+
+<ul>
+
+
+	<div style="display: flex; align-items: center;">
+	
+<!-- picture -->
+	
+	<div class="image-container">
+	<div style="flex: 1; text-align: center;">
+		<img src="school_09.jpg" alt="Last Day" 
+		style="width: 100%; max-width: 500px; height: auto; border: 5px solid #002147;">
+		<div class="image-caption">Here’s a memorable photo of me during my high school days, filled with growth, challenges, and unforgettable moments!🫂</div>
+</div>
+</div>
+
+<!-- text -->
+	
+	
+	<div style="flex: 1; padding-left: 20px;">
+	<li style="margin-bottom: 10px;"> 
+
+        <h3 style="font-size: 35px;">🖋️High School</h3> 
+
+	</li>
+    		<p style="margin-top: 10px; line-height: 1.5; text-align: justify; font-size: 20px;">
+        		When I entered high school, I chose to study at SMK Permata Jaya. My journey 
+        		there began in 2017 and lasted until 2021. I sat for the Pentaksiran Tingkatan 3 (PT3) 
+        		in 2019 and the Sijil Pelajaran Malaysia (SPM) in 2021, all at the same school. It was 
+        		an exciting time as I made new friends, learned many new things, and participated 
+        		in various activities and competitions. Those experiences gave me unforgettable memories 
+        		and made my high school years truly enjoyable!
+    		</p>
+	</div>
+
+</div>
+</ul>
+</section>
+
+<section class="university">
+
+<br>
+<br>
+<br>
+
+<ul>
+	<li>
+		<h3 style="font-size: 35px;">🔎University</h3>
+	</li>
+
+	<p style="margin-top: 10px; line-height: 1.5; text-align: justify; font-size: 20px;">
+		And just like that, my school days came to an end. I moved on to university life and pursued my studies in Information Management at UiTM Segamat Campus. University 			brought a whole new world of experiences and learning for me. I even stepped out of my comfort zone by joining the Majlis Perwakilan Komander Kesatria (MPKK). 	Although 		there were many challenges along the way to completing my studies, I’m grateful for the opportunity to continue my education and explore so many new things. 
+	</P>
+
+</uL>
+
+<!-- Gambar ii UNI-->
+
+<!-- Container for images -->
+	<div class="image-container-wrapper" style="display: flex; justify-content: center; gap: 20px;">
+
+<!-- Classmates -->
+	<div class="image-container">
+		<img src="class_01.jpg" alt="CLASSMATE" style="width:400px;height:450px;border: 5px solid #002147;">
+		<div class="image-caption">My Classmates.</div>
+	</div>
+
+<!-- Komander -->
+	<div class="image-container">
+		<img src="komander_07.jpg" alt="KOMANDER" style="width:400px;height:450px;border: 5px solid #002147;">
+		<div class="image-caption">My buddies in the 'Komander,' who stood by my side through every challenge and triumph!🔛🔝🫂</div>
+	</div>
+</div>
+
+
+</section>
+
+<br>
+<br>
+<br>
+
+</section>
+
+<!-- Subtopik 3 -->
+<section class="experience">
+
+	<h1 id="experience" style="scroll-margin-top: 65px;">💼EXPERIENCE💼</h1>
+            
+	<p style="margin-top: 10px; line-height: 1.5; text-align: justify; font-size: 20px;">
+		In this section, I’d like to share my experience during my industrial training.I had the opportunity to undergo my internship at Pejabat Tanah Dan Daerah Kecil Rengit from 		July 21 to September 12, 2024. Throughout my time there, I gained many new insights and valuable experiences that truly enriched my learning journey.
+	</P>
+
+
+	<p style="margin-top: 10px; line-height: 1.5; text-align: justify; font-size: 20px;">
+		I was assigned to the Registration Department, where my main tasks involved assisting the staff in attending to the public at the Registration Counter of the 	Rengit Sub-		District Land and District Office. I also had the opportunity to learn and assist with various duties carried out by the staff, such as opening files for specific matters, 		issuing payment receipts for service charges, and many more.
+	</P>
+
+	<p style="margin-top: 10px; line-height: 1.5; text-align: justify; font-size: 20px;">
+		I also had the chance to learn and assist in the technical aspects of creating plans. One of my experiences included learning and using Adobe Photoshop to help insert 			information into plans. The task I enjoyed the most was designing, such as creating a poster design for the Family Day event for Pejabat Tanah Dan Daerah Kecil Rengit. 
+	</P>
+
+<center>
+
+<!-- Gambar poster family day -->
+
+<div class="image-container">
+	<div style="flex: 1; text-align: center;">
+		<img src="poster_family_day.jpg" alt="Poster Family Day" 
+		style="width: 100%; max-width: 500px; height: auto; border: 5px solid #002147;">
+		<div class="image-caption">I designed this poster with my friend Aina. 🤝</div>
+</div>
+
+</center>
+
+	<p style="margin-top: 10px; line-height: 1.5; text-align: justify; font-size: 20px;">
+		Throughout my industrial training here, I felt incredibly grateful because all the staff and my colleagues were kind and created a positive environment. However, 	I 		did face some challenges at times, especially when I lacked the knowledge to assist and meet the needs of the public at the registration counter. Thankfully, 				these issues were resolved smoothly, 	as the staff were always there to guide and teach me patiently. Any questions I had about my tasks were always answered with 			clear explanations. My supervisor was also very supportive, sharing valuable insights and knowledge that helped me grow.
+	</P>
+
+<center>
+
+	<!-- picture SV -->
+
+	<div class="image-container">
+		<img src="intern_13.jpg" alt="Photo Supervisor" style="width:550px;height:450px;border: 5px solid #002147;">
+		<div class="image-caption" style="position:  relative; text-align: center; color: white; font-size: 18px;">This is my supervisor. 🤗</div>
+	</div>
+
+
+</center>
+
+	<p style="margin-top: 10px; line-height: 1.5; text-align: justify; font-size: 20px;">
+		I also had the chance to join the Family Day event organised by Pejabat Tanah 	Dan Daerah Kecil Rengit at Adena Beach Resort, and it was such an amazing experience! 			It became one of the sweetest memories of my internship. What made it 	even more special was how it strengthened the bond between me and my fellow interns we're still 		super close even now, despite being back at our respective universities.</p> 
+
+	<p style="margin-top: 10px; line-height: 1.5; text-align: justify; font-size: 20px;">
+		I'm truly grateful to Pejabat Tanah Dan Daerah Kecil Rengit for giving me this opportunity to complete my industrial training there. They not only provided me with valuable 		learning experiences but also allowed me to create joyful and unforgettable memories with them.
+	</P>
+
+<center>
+
+<!-- Container for images -->
+	<div class="image-container-wrapper" style="display: flex; justify-content: center; gap: 20px;">
+
+<!-- Special gift -->
+	<div class="image-container">
+		<img src="intern_special.jpg" alt="Photo Pejabat Tanah Dan Daerah Kecil Rengit" style="width:500px;height:600px;border: 5px solid #002147;">
+		<div class="image-caption">As a heartfelt gesture on our last day of internship, my fellow interns and I designed this picture as a gift to express our gratitude.💌</div>
+	</div>
+
+<!-- Family day -->
+	<div class="image-container">
+		<p><img src="intern_01.jpg" alt=" Photo Family Day Pejabat Tanah Dan Daerah Kecil Rengit" style="width:600px;height:400px;border: 5px solid #002147;"></p>
+		<div class="image-caption">This photo was taken during family day. ❤️</div>
+	</div>
+</div>
+
+</center>
+</section>
+
+
+<!-- Subtopik 4 -->
+
+	<section class="gallery">
+
+<center>
+    
+	<a id="gallery" style="scroll-margin-top: 350px;" href="gallery.html" class="gallery-button" border: 5px solid #002147;>📸GALLERY📸</a>
+
+</center>
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact">
+
+<h1 id="contact" style="scroll-margin-top: 65px;">💌Reach me here !</h1>
+
+	<div style="text-align: center;">
+    <p>Click on the icon for further information:</p>
+    <img src="sosmed.png" alt="Social Media for Contact" usemap="#sosmed" style="width:600px;height:400px;border: 5px solid #002147;">
+</div>
+
+<map name="sosmed">
+    <area shape="rect" coords="7,8,301,161" alt="Link to TikTok Profile" href="https://www.tiktok.com/@eiyna_notfound?_t=ZS-8s3B6ssMzD6&_r=1" target="_blank">
+    <area shape="rect" coords="300,7,590,183" alt="Link to Instagram Profile" href="https://www.instagram.com/eiyyyna/profilecard/?igsh=dXA1aXltamNld3pp" target="_blank">
+    <area shape="rect" coords="309,207,599,383" alt="Link to Snapchat Profile" href="https://snapchat.com/t/gFhvlKLU" target="_blank">
+    <area shape="rect" coords="0,181,290,357" alt="Link to Facebook Share" href="https://www.facebook.com/share/12FkHeSSYJx/?mibextid=LQQJ4d" target="_blank">
+</map>
+
+
+<br>
+<br>
+<br>
+
+<!-- closing -->
+
+        <footer>
+            <p><sub>Created</sub> <sup>by</sup> Eiyna</p>
+        </footer>
+
+</div>
+</body>
+</html>
+
